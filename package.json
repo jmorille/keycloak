@@ -1,0 +1,31 @@
+{
+  "name": "keycloak",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon -w 'src/**' src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmorille/keycloak.git"
+  },
+  "keywords": [
+    "keycloak",
+    "koa"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmorille/keycloak/issues"
+  },
+  "homepage": "https://github.com/jmorille/keycloak#readme",
+  "dependencies": {
+    "koa": "^2.5.1",
+    "koa-router": "^7.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.4"
+  }
+}
