@@ -9,6 +9,15 @@ router.get('/', ctx => {
         name: "keycloak"
     }
 });
-
+router.get('/user', ctx => {
+    ctx.body = {
+        user: ctx
+    }
+});
+router.get('/secure',  ctx => {
+    ctx.body = {
+        name: "Secure keycloak"
+    }
+});
 
 module.exports = router;
