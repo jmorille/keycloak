@@ -1,3 +1,9 @@
+# config
+/config/certs
+
+# nodejs
+package-lock.json
+
 # Logs
 logs
 *.log
