@@ -22,7 +22,6 @@ RUN  curl -sLS "$CJOSE_DEB_URL" -o libcjose.deb \
  && dpkg -i libcjose.deb \
  && rm libcjose.deb
 
-
 RUN curl -sLS "$OPENIDC_VERSION_DEB_URL" -o mod_auth_openidc-$OPENIDC_VERSION.deb \
  && sha1sum "mod_auth_openidc-$OPENIDC_VERSION.deb"  \
  && echo "$OPENIDC_VERSION_DEB_SHA1 mod_auth_openidc-$OPENIDC_VERSION.deb" | sha1sum -c - \
@@ -30,5 +29,15 @@ RUN curl -sLS "$OPENIDC_VERSION_DEB_URL" -o mod_auth_openidc-$OPENIDC_VERSION.de
  && rm mod_auth_openidc-$OPENIDC_VERSION.deb \
  && ln -s /usr/lib/apache2/modules/mod_auth_openidc.so /usr/local/apache2/modules/mod_auth_openidc.so
 
+# RUN sed -i -e 's/Listen 80/#Listen 80/g' conf/httpd.conf
+# Comment line
+RUN sed -i '/Listen/s/^/#/g'  conf/httpd.conf
+# Un comment line
+RUN sed -i '/LoadModule lua_module/s/^#//g'  conf/httpd.conf
+RUN sed -i '/LoadModule proxy_fcgi/s/^#//g'  conf/httpd.conf
+RUN sed -i '/LoadModule proxy_module/s/^#//g'  conf/httpd.conf
+RUN sed -i '/LoadModule proxy_http_module/s/^#//g'  conf/httpd.conf
 
 RUN sed -i '/LoadModule rewrite_module modules/aLoadModule auth_openidc_module modules/mod_auth_openidc.so' conf/httpd.conf
+RUN mkdir /usr/local/apache2/conf/conf.d \
+ && echo "IncludeOptional /usr/local/apache2/conf/conf.d/*.conf" >> conf/httpd.conf

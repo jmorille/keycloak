@@ -2,22 +2,30 @@ version: "3.5"
 services:
 
   apache:
-   build:
+    build:
       context: ./docker
     image: jmorille/httpd-oidc:latest
+    environment:
+      HOST_IP: "max"
+      HOST_PORT: "82"
+      KC_ADDR: "http://max:8080"
+      KC_REALM: "AgriPrev"
+      CLIENT_ID: "apache-app"
+      CLIENT_SECRET: "5cb248bf-2832-402b-bf43-55c903379928"
+      CLIENT_APP_NAME: "private"
     volumes:
-      - ./config/app1-vhost.conf:/etc/nginx/conf.d/default.conf:ro
-      - ./config/certs:/etc/nginx/ssl:ro
-#      - ./config/nginx/ssl-optim.nginx:/etc/nginx/nginx-ssl-optim.conf:ro
-#      - ./config/nginx/secu-optim.nginx:/etc/nginx/nginx-secu-optim.conf:ro
-      - ./logs/nginx:/var/log/nginx
+      - ./config/app1-vhost.conf:/usr/local/apache2/conf/conf.d/default.conf:ro
+      - ./config/htdocs:/data/htdocs:ro
+      - ./config/certs:/usr/local/apache2/ssl:ro
+      - ./logs/httpd:/var/log/httpd
     ports:
-      - "8081:8081"
-      - "8443:8443"
-    depends_on:
-      - keycloak
-    networks:
-      - keycloak-network
+      - "82:82"
+    network_mode: "host"
 
-networks:
-    keycloak-network:
+  fpm:
+    image: php:7-fpm
+    volumes:
+      - ./config/htdocs:/data/htdocs:ro
+    ports:
+      - "9000:9000"
+    network_mode: "host"

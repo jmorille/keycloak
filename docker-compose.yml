@@ -56,4 +56,4 @@ networks:
     keycloak-network:
 
 volumes:
- keycloakdbdata:
+  keycloakdbdata:
