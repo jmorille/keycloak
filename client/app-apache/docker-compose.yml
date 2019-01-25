@@ -12,8 +12,8 @@ services:
 #      - ./config/nginx/secu-optim.nginx:/etc/nginx/nginx-secu-optim.conf:ro
       - ./logs/nginx:/var/log/nginx
     ports:
-      - "80:80"
-      - "443:443"
+      - "8081:8081"
+      - "8443:8443"
     depends_on:
       - keycloak
     networks:
