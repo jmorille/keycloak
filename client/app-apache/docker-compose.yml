@@ -6,7 +6,7 @@ services:
       context: ./docker
     image: jmorille/httpd-oidc:latest
     volumes:
-      - ./config/nginx/keycloak.nginx:/etc/nginx/conf.d/default.conf:ro
+      - ./config/app1-vhost.conf:/etc/nginx/conf.d/default.conf:ro
       - ./config/certs:/etc/nginx/ssl:ro
 #      - ./config/nginx/ssl-optim.nginx:/etc/nginx/nginx-ssl-optim.conf:ro
 #      - ./config/nginx/secu-optim.nginx:/etc/nginx/nginx-secu-optim.conf:ro
