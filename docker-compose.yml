@@ -37,7 +37,10 @@ services:
 #    volumes:
 #      - "./logs/keycloak:/opt/jboss/keycloak/standalone/log"
     networks:
-      - keycloak-network
+      keycloak-network:
+          aliases:
+            - max
+
 
   keycloakDB:
     image: postgres
@@ -54,6 +57,7 @@ services:
 
 networks:
     keycloak-network:
+      driver: bridge
 
 volumes:
   keycloakdbdata:
