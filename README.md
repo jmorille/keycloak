@@ -1,5 +1,16 @@
 # keycloak
 
+## Poc Configuration
+
+### OS
+
+####  File ```/etc/hosts```
+```
+127.0.1.1	auth.agriprev.loc
+127.0.1.1	priv.agriprev.loc
+127.0.1.1	old.pai.loc
+```
+
 ### Génération des certificats https
 
 ```bash

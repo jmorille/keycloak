@@ -39,6 +39,7 @@ services:
     networks:
       keycloak-network:
           aliases:
+            - auth.agriprev.loc
             - max
 
 
