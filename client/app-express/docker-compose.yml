@@ -1,0 +1,66 @@
+version: "3.5"
+services:
+
+  apache1:
+    image: node:latest
+    container_name: service-api
+    volumes:
+      - ./config/app-vhost.conf:/usr/local/apache2/conf/conf.d/default.conf:ro
+      - ./config/htdocs/app1:/data/htdocs
+      - ./config/htdocs/app/219:/data/htdocs/css:ro
+      - ./config/certs:/usr/local/apache2/ssl:ro
+      - ./logs/httpd/app1:/var/log/httpd
+    ports:
+      - "81:81"
+    networks:
+      - apache1-network
+      - keycloak-network
+
+  apache2:
+    build:
+      context: ./docker
+    image: jmorille/httpd-oidc:latest
+    container_name: apache2
+    environment:
+      HOST_IP: "priv.agriprev.loc"
+      HOST_PORT: "82"
+      FPM_HOST: "fpm2"
+      KC_ADDR: "http://auth.agriprev.loc:8080"
+      KC_REALM: "AgriPrev"
+      CLIENT_ID: "agriprev-priv"
+      CLIENT_SECRET: "5cb248bf-2832-402b-bf43-55c903379928"
+      CLIENT_APP_NAME: ""
+    volumes:
+      - ./config/app-vhost.conf:/usr/local/apache2/conf/conf.d/default.conf:ro
+      - ./config/htdocs/app2:/data/htdocs
+      - ./config/htdocs/app/221:/data/htdocs/css:ro
+      - ./config/certs:/usr/local/apache2/ssl:ro
+      - ./logs/httpd/app2:/var/log/httpd
+    ports:
+      - "82:82"
+    networks:
+      - apache2-network
+      - keycloak-network
+
+  fpm1:
+    image: php:7-fpm
+    volumes:
+      - ./config/htdocs/app1:/data/htdocs:ro
+    networks:
+      - apache1-network
+
+  fpm2:
+    image: php:7-fpm
+    volumes:
+      - ./config/htdocs/app2:/data/htdocs:ro
+    networks:
+      - apache2-network
+
+networks:
+  apache1-network:
+  apache2-network:
+  keycloak-network:
+    external:
+      name: keycloak_keycloak-network
+
+

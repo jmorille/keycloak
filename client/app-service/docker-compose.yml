@@ -1,0 +1,29 @@
+version: "3.5"
+services:
+
+  service-nodejs:
+    build:
+      context: ./
+    image: jmorille/service-nodejs
+    container_name: service-nodejs
+    environment:
+      KEYCLOAK_URL: "http://auth.agriprev.loc:8080"
+    ports:
+      - "9080:9080"
+    networks:
+      - apache1-network
+      - apache2-network
+      - keycloak-network
+
+networks:
+  apache1-network:
+    external:
+      name:  app-apache_apache1-network
+  apache2-network:
+    external:
+      name:  app-apache_apache2-network
+  keycloak-network:
+    external:
+      name: keycloak_keycloak-network
+
+
