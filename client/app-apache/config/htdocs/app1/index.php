@@ -126,8 +126,8 @@
 				<h3 class="resources">Resources:</h3>
 				<ul>
 					<li class="view-css">
-						<a href="style.css" title="View the source CSS file of the currently-viewed design.">
-							View This Design&#8217;s <abbr title="Cascading Style Sheets">CSS</abbr>						</a>
+						<a href="phpinfo.php" title="PhpInfo.">
+							Php<abbr title="Cascading Style Sheets">Info</abbr>						</a>
 					</li>
 					<li class="css-resources">
 						<a href="http://www.mezzoblue.com/zengarden/resources/" title="Links to great sites with information on using CSS.">

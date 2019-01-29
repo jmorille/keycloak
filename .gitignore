@@ -1,5 +1,5 @@
 # config
-/config/certs
+# /config/certs
 
 # nodejs
 package-lock.json

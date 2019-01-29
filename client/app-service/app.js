@@ -3,10 +3,11 @@ const express = require('express');
 const session = require('express-session');
 const bodyParser = require('body-parser');
 const Keycloak = require('keycloak-connect');
+const morgan = require('morgan');
 const cors = require('cors');
 
 const app = express();
-
+app.use(morgan('combined'));
 app.use(bodyParser.json());
 
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";

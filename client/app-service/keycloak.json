@@ -1,7 +1,7 @@
 {
   "realm": "AgriPrev",
   "bearer-only": true,
-  "auth-server-url": "${env.KEYCLOAK_URL}",
+  "auth-server-url": "http://auth.agriprev.loc:8080",
   "ssl-required": "none",
   "resource": "service-nodejs"
 }

@@ -1,2 +1,4 @@
 <?php
-echo phpinfo();
+phpinfo(INFO_VARIABLES);
+
+?>
