@@ -46,7 +46,9 @@ app.get('/public', function (req, res) {
     res.json({message: 'public'});
 });
 
-app.get('/secured', keycloak.protect('realm:user'), function (req, res) {
+// keycloak.protect('realm:user')
+app.get('/secured', keycloak.protect(), function (req, res) {
+    console.log(req.kauth.grant.access_token.content);
     res.json({message: 'secured'});
 });
 
