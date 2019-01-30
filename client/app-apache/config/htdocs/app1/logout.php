@@ -23,10 +23,7 @@
 <div class="page-wrapper">
 
     <section class="intro" id="zen-intro">
-        <header role="banner">
-            <h1>PAI Privé</h1>
-            <h2>Espace <abbr title="Cascading Style Sheets">Privée</abbr></h2>
-        </header>
+        <?php include 'frag/banner.php'; ?>
 
         <div class="summary" id="zen-summary" role="article">
             <p>Ancien espace <abbr title="Cascading Style Sheets">PAI Privé</abbr></p>
@@ -34,10 +31,8 @@
         </div>
 
         <div class="preamble" id="zen-preamble" role="article">
-            <h3>The Road to Enlightenment</h3>
-            <p>Littering a dark and dreary road lay the past relics of browser-specific tags, incompatible <abbr title="Document Object Model">DOM</abbr>s, broken <abbr title="Cascading Style Sheets">CSS</abbr> support, and abandoned browsers.</p>
-            <p>We must clear the mind of the past. Web enlightenment has been achieved thanks to the tireless efforts of folk like the <abbr title="World Wide Web Consortium">W3C</abbr>, <abbr title="Web Standards Project">WaSP</abbr>, and the major browser creators.</p>
-            <p>The CSS Zen Garden invites you to relax and meditate on the important lessons of the masters. Begin to see with clarity. Learn to use the time-honored techniques in new and invigorating fashion. Become one with the web.</p>
+            <h3>Page Logout</h3>
+            <p>Merci de votre visite.</p>
         </div>
     </section>
 
@@ -61,37 +56,13 @@
         </div>
 
 
-        <footer>
-            <a href="http://validator.w3.org/check/referer" title="Check the validity of this site&#8217;s HTML" class="zen-validate-html">HTML</a>
-            <a href="http://jigsaw.w3.org/css-validator/check/referer" title="Check the validity of this site&#8217;s CSS" class="zen-validate-css">CSS</a>
-            <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" title="View the Creative Commons license of this site: Attribution-NonCommercial-ShareAlike." class="zen-license">CC</a>
-            <a href="http://mezzoblue.com/zengarden/faq/#aaa" title="Read about the accessibility of this site" class="zen-accessibility">A11y</a>
-            <a href="https://github.com/mezzoblue/csszengarden.com" title="Fork this site on Github" class="zen-github">GH</a>
-        </footer>
+        <?php include 'frag/footer.php'; ?>
 
     </div>
 
 
 
-            <div class="design-archives" id="design-archives">
-                <h3 class="archives">Menu:</h3>
-                <nav role="navigation">
-                    <ul>
-                        <li class="next">
-                            <a href="/">
-                                Secure Home <span class="indicator">&rsaquo;</span>
-                            </a>
-                        </li>
-                        <li class="viewall">
-                            <a href="http://www.mezzoblue.com/zengarden/alldesigns/" title="View every submission to the Zen Garden.">
-                                View All Designs							</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-
-        </div>
-    </aside>
+</div>
 
 
 </div>
