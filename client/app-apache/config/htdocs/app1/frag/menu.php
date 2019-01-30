@@ -30,13 +30,13 @@
             <nav role="navigation">
                 <ul>
                     <li class="next">
-                        <a href="/">
-                            Home<span class="indicator">&rsaquo;</span>
+                        <a href="http://old.pai.loc:81/">
+                            Ancien PAI<span class="indicator">&rsaquo;</span>
                         </a>
                     </li>
                     <li class="viewall">
                         <a href="http://priv.agriprev.loc:82/" title="PAI Privé.">
-                            AgriPrev Privé</a>
+                            New AgriPrev Privé</a>
                     </li>
                 </ul>
             </nav>
