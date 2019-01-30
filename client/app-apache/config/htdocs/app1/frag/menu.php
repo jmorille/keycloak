@@ -16,7 +16,7 @@
                     </li>					<li>
                         <a href="/page5.php" class="design-name">Normalité</a> par						<a href="/page5.php" class="designer-name">Vincent Van Gogh</a>
                     </li>					<li>
-                        <a href="/page6.php" class="design-name">Esprit</a> par						<a href="/page6.php" class="designer-name">Miyamoto Musashi</a>
+                        <a href="/page6.php" class="design-name">Bêtise</a> par						<a href="/page6.php" class="designer-name">Albert Einstein</a>
                     </li>					<li>
                         <a href="/page7.php" class="design-name">A Robot Named Jimmy</a> par						<a href="/page7.php" class="designer-name">meltmedia</a>
                     </li>					<li>

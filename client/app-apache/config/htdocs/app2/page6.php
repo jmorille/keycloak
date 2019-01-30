@@ -1,47 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>AgriPev Privé -Page 1</title>
+    <meta charset="utf-8">
+    <title>Page 6</title>
 
-	<link rel="stylesheet" media="screen" href="/css/style.css?v=8may2013">
-	<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.csszengarden.com/zengarden.xml">
+    <link rel="stylesheet" media="screen" href="/css/style.css?v=8may2013">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.csszengarden.com/zengarden.xml">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="author" content="Dave Shea">
-	<meta name="description" content="A demonstration of what can be accomplished visually through CSS-based design.">
-	<meta name="robots" content="all">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dave Shea">
+    <meta name="description" content="A demonstration of what can be accomplished visually through CSS-based design.">
+    <meta name="robots" content="all">
 
 
-	<!--[if lt IE 9]>
-	<script src="script/html5shiv.js"></script>
-	<![endif]-->
+    <!--[if lt IE 9]>
+    <script src="script/html5shiv.js"></script>
+    <![endif]-->
 </head>
 
 
 <body id="css-zen-garden">
 <div class="page-wrapper">
 
-	<section class="intro" id="zen-intro">
+    <section class="intro" id="zen-intro">
         <?php include 'frag/banner.php'; ?>
         <?php include 'frag/auth.php'; ?>
         <?php include 'frag/preamble.php'; ?>
-	</section>
+    </section>
 
-	<div class="main supporting" id="zen-supporting" role="main">
+    <div class="main supporting" id="zen-supporting" role="main">
         <div class="explanation" id="zen-explanation" role="article">
             <h3>Page 6</h3>
-            <p>Il faut rendre notre esprit semblable à l'eau. L'eau prend la forme des récipients qui la contiennent, qu'ils soient carrés ou ronds. L'eau peut se réduire à une goutte ou atteindre la taille d'un océan.
-                <br/><br/>
-                <abbr title="Cascading Style Sheets"> Miyamoto Musashi</abbr>
-                <br/>Traité des cinq roues : Gorin-no-sho</p>
+            <p>Il n'existe que deux choses infinies, l'univers et la bêtise humaine...</p>
+            <p>mais pour l'univers, je n'ai pas de certitude absolue.
+                <br/>
+                <abbr title="Cascading Style Sheets"> Albert Einstein</abbr> </p>
         </div>
 
+        <div class="participation" id="zen-participation" role="article">
+            <h3>Relativité</h3>
+            <p>Placez votre main sur un poêle une minute et ça vous semble durer une heure</p>
+            <p>Asseyez vous auprès d'une jolie fille une heure et ça vous semble durer une minute. </p>
+            <p>C'est ça la relativité. <abbr title="Cascading Style Sheets">Albert Einstein</abbr> </p>
+        </div>
 
         <?php include 'frag/footer.php'; ?>
 
 
-	</div>
+    </div>
 
 
     <?php include 'frag/menu.php'; ?>

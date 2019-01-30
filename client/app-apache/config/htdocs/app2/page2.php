@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>AgriPev Privé -Page 1</title>
+	<title>Page 2</title>
 
 	<link rel="stylesheet" media="screen" href="/css/style.css?v=8may2013">
 	<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.csszengarden.com/zengarden.xml">
