@@ -23,22 +23,9 @@
 <div class="page-wrapper">
 
 	<section class="intro" id="zen-intro">
-		<header role="banner">
-			<h1>AgriPrev Privé</h1>
-			<h2>Espace <abbr title="Cascading Style Sheets">Privée</abbr></h2>
-		</header>
-
-		<div class="summary" id="zen-summary" role="article">
-			<p>Espace <abbr title="Cascading Style Sheets">AgriPrev Privé</abbr></p>
-			<p>Bienvenu <a href="http://auth.agriprev.loc:8080/auth/realms/AgriPrev/account/" title="This page's source HTML code, not to be modified."><?= getenv('OIDC_CLAIM_name') ?></a> and <a href="/redirect_uri?logout=http://priv.agriprev.loc:82/logout.html" title="Logout">Logout</a></p>
-		</div>
-
-		<div class="preamble" id="zen-preamble" role="article">
-			<h3>The Road to Enlightenment</h3>
-			<p>Littering a dark and dreary road lay the past relics of browser-specific tags, incompatible <abbr title="Document Object Model">DOM</abbr>s, broken <abbr title="Cascading Style Sheets">CSS</abbr> support, and abandoned browsers.</p>
-			<p>We must clear the mind of the past. Web enlightenment has been achieved thanks to the tireless efforts of folk like the <abbr title="World Wide Web Consortium">W3C</abbr>, <abbr title="Web Standards Project">WaSP</abbr>, and the major browser creators.</p>
-			<p>The CSS Zen Garden invites you to relax and meditate on the important lessons of the masters. Begin to see with clarity. Learn to use the time-honored techniques in new and invigorating fashion. Become one with the web.</p>
-		</div>
+        <?php include 'frag/banner.php'; ?>
+        <?php include 'frag/auth.php'; ?>
+        <?php include 'frag/preamble.php'; ?>
 	</section>
 
 	<div class="main supporting" id="zen-supporting" role="main">
@@ -79,78 +66,7 @@
 
 	</div>
 
-
-	<aside class="sidebar" role="complementary">
-		<div class="wrapper">
-
-			<div class="design-selection" id="design-selection">
-				<h3 class="select">Select a Design:</h3>
-				<nav role="navigation">
-					<ul>
-					<li>
-						<a href="/221/" class="design-name">Mid Century Modern</a> by						<a href="http://andrewlohman.com/" class="designer-name">Andrew Lohman</a>
-					</li>					<li>
-						<a href="/220/" class="design-name">Garments</a> by						<a href="http://danielmall.com/" class="designer-name">Dan Mall</a>
-					</li>					<li>
-						<a href="/219/" class="design-name">Steel</a> by						<a href="http://steffen-knoeller.de" class="designer-name">Steffen Knoeller</a>
-					</li>					<li>
-						<a href="/218/" class="design-name">Apothecary</a> by						<a href="http://trentwalton.com" class="designer-name">Trent Walton</a>
-					</li>					<li>
-						<a href="/217/" class="design-name">Screen Filler</a> by						<a href="http://elliotjaystocks.com/" class="designer-name">Elliot Jay Stocks</a>
-					</li>					<li>
-						<a href="/216/" class="design-name">Fountain Kiss</a> by						<a href="http://jeremycarlson.com" class="designer-name">Jeremy Carlson</a>
-					</li>					<li>
-						<a href="/215/" class="design-name">A Robot Named Jimmy</a> by						<a href="http://meltmedia.com/" class="designer-name">meltmedia</a>
-					</li>					<li>
-						<a href="/214/" class="design-name">Verde Moderna</a> by						<a href="http://www.mezzoblue.com/" class="designer-name">Dave Shea</a>
-					</li>					</ul>
-				</nav>
-			</div>
-
-			<div class="design-archives" id="design-archives">
-				<h3 class="archives">Menu:</h3>
-				<nav role="navigation">
-					<ul>
-						<li class="next">
-							<a href="/">
-								Home <span class="indicator">&rsaquo;</span>
-							</a>
-						</li>
-						<li class="viewall">
-							<a href="http://old.pai.loc:81/" title="PAI Privé">
-								Pai Privé</a>
-						</li>
-					</ul>
-				</nav>
-			</div>
-
-			<div class="zen-resources" id="zen-resources">
-				<h3 class="resources">Resources:</h3>
-				<ul>
-					<li class="view-css">
-						<a href="/phpinfo.php" title="PhpInfo.">
-							Php<abbr title="Cascading Style Sheets">Info</abbr>						</a>
-					</li>
-					<li class="css-resources">
-						<a href="http://www.mezzoblue.com/zengarden/resources/" title="Links to great sites with information on using CSS.">
-							<abbr title="Cascading Style Sheets">CSS</abbr> Resources						</a>
-					</li>
-					<li class="zen-faq">
-						<a href="http://www.mezzoblue.com/zengarden/faq/" title="A list of Frequently Asked Questions about the Zen Garden.">
-							<abbr title="Frequently Asked Questions">FAQ</abbr>						</a>
-					</li>
-					<li class="zen-submit">
-						<a href="http://www.mezzoblue.com/zengarden/submit/" title="Send in your own CSS file.">
-							Submit a Design						</a>
-					</li>
-					<li class="zen-translations">
-						<a href="http://www.mezzoblue.com/zengarden/translations/" title="View translated versions of this page.">
-							Translations						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</aside>
+    <?php include 'frag/menu.php'; ?>
 
 
 </div>
