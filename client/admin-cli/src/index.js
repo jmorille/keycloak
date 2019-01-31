@@ -13,7 +13,12 @@ const form = {
     password: "admin",
 };
 
-fetch(adminUrl)
+fetch(adminUrl, {
+    method: "post",
+    headers: {
+        "Content-Type": "application/json",
+    },
+})
     .then( res => {
         if (res.ok) {
             return res.json();
