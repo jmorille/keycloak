@@ -50,7 +50,7 @@ app.get('/public', function (req, res) {
 app.get('/secured', keycloak.protect(), function (req, res) {
     const token = req.kauth.grant.access_token.content;
     const user = {email:token.email, name:token.name, preferred_username: token.preferred_username, given_name:token.given_name, family_nam:    token.family_name };
-    res.json({message: 'secured', user});
+    res.json({message: 'secured', user, token});
 });
 
 app.get('/admin', keycloak.protect('realm:admin'), function (req, res) {
